@@ -1,0 +1,31 @@
+{
+  "name": "tf-js-body-segmentation",
+  "version": "1.0.0",
+  "description": "Tensorflow React Body Segmentation Web App",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm init"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moisestech/tf-js-body-segmentation.git"
+  },
+  "keywords": [
+    "tensorflowjs",
+    "reactjs",
+    "body-segmentation",
+    "web",
+    "app"
+  ],
+  "author": "Moises Sanabria",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/moisestech/tf-js-body-segmentation/issues"
+  },
+  "homepage": "https://github.com/moisestech/tf-js-body-segmentation#readme",
+  "devDependencies": {
+    "webpack": "^5.19.0",
+    "webpack-cli": "^4.4.0"
+  },
+  "dependencies": {}
+}
