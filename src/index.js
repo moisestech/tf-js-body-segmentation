@@ -1,3 +1,3 @@
-let tf_js_body_segmentation = true;
+let project_name = "Tensorflow.js React Body Segmentation";
 
-console.log(tf_js_body_segmentation);
+console.log(project_name);
