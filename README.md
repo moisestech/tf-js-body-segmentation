@@ -5,6 +5,11 @@ Tensorflow.js React Body Segmentation
 ## To-Do's
 
 - Finnish Tutorial
-- Add Notes
-- Mobile Friendly
-- Diagram
+- Finnish README.md page
+- Add HOWTO.md page
+- Add File Diagram
+- Finnish Webpack Config
+- Add Babel Compilation
+- Migrate to TypeScript
+- Make Mobile Friendly
+- Write Tests
