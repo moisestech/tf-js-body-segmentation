@@ -1,6 +1,18 @@
 # Tensorflow.js React Body Segmentation
 
-Tensorflow.js React Body Segmentation
+## **Interactice Webcam Body Segmentation**
+
+## ⚙ Features
+
+## 👁️‍🗨️ Project Preview
+
+Coming Soon!
+
+## 🗺 URL Tree
+
+## 🌿 App tree
+
+## ⛰️ Roadmap
 
 ## To-Do's
 
@@ -15,4 +27,3 @@ Tensorflow.js React Body Segmentation
 9. Write Tests
 
 ### [Moises Sanabria](https://www.moises.tech/)
-
