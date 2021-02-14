@@ -1,9 +1,11 @@
-import "./styles.css";
-import React, { useState } from "react";
-import ReactDOM from "react-dom";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './styles.css';
+import App from './App';
 
-let project_name = "Tensorflow.js React Body Segmentation";
-
-console.log(project_name);
-
-// https://www.youtube.com/watch?v=KAaXbGr9o0s
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
