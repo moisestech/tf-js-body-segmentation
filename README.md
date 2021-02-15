@@ -29,7 +29,23 @@ Fore additional info: []()
 
 ## 🌿 App tree
 
-
+``` bash
+├── HOWTO.md
+├── LICENSE
+├── README.md
+├── package.json
+├── public
+│   ├── _redirects
+│   ├── assets
+│   ├── favicon.ico
+│   └── index.html
+├── src
+│   ├── App
+│   │   └── index.js
+│   ├── index.js
+│   └── styles.css
+└── webpack.config.js
+```
 
 ## ⛰️ Roadmap
 
