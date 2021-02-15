@@ -1,8 +1,12 @@
 # HOW-TO
 
-1. Installing body pix
-2. Building the body pix app
-3. Detecting segments in real time
+## **1.** Installing body pix
+
+## **2.** Building the body pix app
+
+## **3.** Detecting segments in real time
+
+---
 
 ## NPM
 
@@ -22,6 +26,8 @@
 - **scripts**: `npm start` runs scripts: { "start": "webpack serve"},
 - **main**: `webpack.config.js` is where webpack starts bundling from.
 
+---
+
 ## WEBPACK HOW-TO
 
 - **Webpack**: Module bundler.
@@ -34,6 +40,8 @@
 - **HtmlWebpackPlugin**: info coming soon.
 - **CleanWebpackPlugin**: info coming soon.
 - **UglifyPlugin**: info coming soon.
+
+---
 
 ## BABEL HOW-TO
 
