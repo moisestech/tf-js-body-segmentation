@@ -46,3 +46,10 @@
 ## BABEL HOW-TO
 
 ### Babel Loader
+
+---
+
+## TREE
+
+- Install Tree with Homebrew using `brew install tree`
+- To create dir structure `tree -I 'node_modules|package-lock.json|dist'`
