@@ -15,7 +15,7 @@ import Webcam from "react-webcam";
 import * as tf from "@tensorflow/tfjs";
 import * as cocossd from "@tensorflow-models/body-pix";
 
-export default  function App() {
+export default function App() {
   let project_name = "Tensorflow.js React Body Segmentation";
 
   return (  
