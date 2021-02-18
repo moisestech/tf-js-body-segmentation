@@ -1,10 +1,18 @@
 # HOW-TO
 
-## **1.** Installing body pix
+## **1.** Install dependencies
 
-## **2.** Building the body pix app
+## **2.** Import dependencies
 
-## **3.** Detecting segments in real time
+## **3.** Setup webcam and canvas
+
+## **4.** Define references to those
+
+## **5.** Load handpose
+
+## **6.** Detect function
+
+## **7.** Draw using drawMask
 
 ---
 
@@ -46,6 +54,17 @@
 ## BABEL HOW-TO
 
 ### Babel Loader
+
+### Babel Presets
+
+- **@babel/preset-env**: info coming soon.
+- **@babel/preset-react**: info coming soon.
+
+### Babel Plugins
+
+- **@babel/plugin-transform-runtime**: info coming soon.
+- **@babel/plugin-proposal-pipeline-operator**: info coming soon.
+- **@babel/plugin-syntax-dynamic-import**: info coming soon.
 
 ---
 
