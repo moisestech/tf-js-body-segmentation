@@ -19,7 +19,7 @@ export default function App() {
   let project_name = "Tensorflow.js React Body Segmentation";
 
   return (  
-    {console.log(project_name)}
+    {project_name}
   )
 }
 
