@@ -24,8 +24,10 @@
 ### npm start
 
 - **scripts**: `npm start` runs scripts: `{ "start": "webpack serve"}`,
-  - store your webpack commmands in package.json#scripts
+  - webpack commmands are stored in package.json#scripts
   - alternatively run `npx webpack` or `node_modules/./bin/webpack`
+
+---
 
 ## Package.JSON
 
