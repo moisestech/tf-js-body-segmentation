@@ -17,7 +17,6 @@
 
 Coming Soon!
 
-
 ## 🚀 Start
 
 To start app: `npm start`
