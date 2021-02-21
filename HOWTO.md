@@ -2,7 +2,14 @@
 
 ## **1.** Install dependencies
 
+- Install Tensorflow Model Semantic segmentation and run segmentation in the browser (DeepLab).
+
 ## **2.** Import dependencies
+
+- App/index.js
+  - `import * as bodypix` and `import * as tensorflow`.
+  - `import {useRef} from 'react'`. [useRef link](https://reactjs.org/docs/hooks-reference.html#useref)
+    - help us reference our onscreen in DOM elements that keep state during the component lifecycle.
 
 ## **3.** Setup webcam and canvas
 
