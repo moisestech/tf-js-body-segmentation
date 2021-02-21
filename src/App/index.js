@@ -15,13 +15,13 @@ import Webcam from "react-webcam";
 import * as tf from "@tensorflow/tfjs";
 import * as cocossd from "@tensorflow-models/body-pix";
 
-export default function App() {
-  let project_name = "Tensorflow.js React Body Segmentation";
+export default function App({project_name = "Tensorflow.js React Body Segmentation"}) {
 
   return (  
-    {project_name}
+    <h1>{project_name}</h1>
   )
 }
 
-// https://www.youtube.com/watch?v=KAaXbGr9o0s
-// https://github.com/nicknochnack/RealTimeBodySegmentation
+// video: https://www.youtube.com/watch?v=KAaXbGr9o0s
+// code: https://github.com/nicknochnack/RealTimeBodySegmentation
+// other blog: https://heartbeat.fritz.ai/body-segmentation-in-webcam-with-tensorflow-js-b455d6ed21b5
