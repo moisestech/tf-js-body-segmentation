@@ -18,13 +18,18 @@ import * as bodyPix from "@tensorflow-models/body-pix";
 export default function App({project_name = "Tensorflow.js React Body Segmentation"}) {
 
   return (  
-    <article>
+    <div clasName="App">
       <h1>{project_name}</h1>
-      <Webcam ref={webcamRef} className="react-webcam" />
-    </article>
+      <header>
+        <Webcam ref={webcamRef} className="react-webcam" />
+        <Canvas ref={canvasRef} className="react-canvas" />
+      </header>
+    </div>
   )
 }
 
 // video: https://www.youtube.com/watch?v=KAaXbGr9o0s
 // code: https://github.com/nicknochnack/RealTimeBodySegmentation
 // other blog: https://heartbeat.fritz.ai/body-segmentation-in-webcam-with-tensorflow-js-b455d6ed21b5
+
+// 10m 26s
