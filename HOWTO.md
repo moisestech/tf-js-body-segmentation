@@ -7,11 +7,14 @@
 ## **2.** Import dependencies
 
 - App/index.js
-  - `import * as bodypix` and `import * as tensorflow`.
+  - `import * as bodypix` and `import * as tf`.
   - `import {useRef} from 'react'`. [useRef link](https://reactjs.org/docs/hooks-reference.html#useref)
     - help us reference our onscreen in DOM elements that keep state during the component lifecycle.
 
 ## **3.** Setup webcam and canvas
+
+- App/index.js
+  - `<Webcam className="react-webcam"/>` return webcam component.
 
 ## **4.** Define references to those
 
