@@ -13,8 +13,9 @@
 
 ## **3.** Setup webcam and canvas
 
-- App/index.js
+- App/index.js in `<header />` component.
   - `<Webcam className="react-webcam"/>` return webcam component.
+  - `<Canvas className="react-canvas" />` return canvas component.
 
 ## **4.** Define references to those
 
