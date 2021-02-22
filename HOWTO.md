@@ -19,6 +19,11 @@
 
 ## **4.** Define references to those
 
+- App/index.js above `App()` return.
+  - connect canvas and webcam components with `useRef`.
+  - `const webcamRef = useRef(null);`
+  - `const camvasRef = useRef(null);`
+
 ## **5.** Load handpose
 
 ## **6.** Detect function
