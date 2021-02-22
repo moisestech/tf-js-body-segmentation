@@ -13,12 +13,15 @@ import Webcam from "react-webcam";
 
 // for running object detection
 import * as tf from "@tensorflow/tfjs";
-import * as cocossd from "@tensorflow-models/body-pix";
+import * as bodyPix from "@tensorflow-models/body-pix";
 
 export default function App({project_name = "Tensorflow.js React Body Segmentation"}) {
 
   return (  
-    <h1>{project_name}</h1>
+    <article>
+      <h1>{project_name}</h1>
+      <Webcam ref={webcamRef} className="react-webcam" />
+    </article>
   )
 }
 
