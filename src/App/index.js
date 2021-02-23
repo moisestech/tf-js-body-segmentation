@@ -20,6 +20,15 @@ export default function App({project_name = "Tensorflow.js React Body Segmentati
   const webCamRef = useRef(null);
   const canvasRef = useRef(null);
 
+  // load model
+  const runBodySegment = async () => {
+    const net = await bodyPix.load();
+    console.log("Bodypix model loaded!");
+  };
+  
+  // invoke model
+  runBodySegment();
+
   return (  
     <div clasName="App">
       <h1>{project_name}</h1>
