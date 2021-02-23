@@ -3,6 +3,7 @@
 ## **1.** Install dependencies
 
 - Install Tensorflow Model Semantic segmentation and run segmentation in the browser (DeepLab).
+- Full list of dependencies and devDependencies in [package.json]().
 
 ## **2.** Import dependencies
 
@@ -13,13 +14,13 @@
 
 ## **3.** Setup webcam and canvas
 
-- App/index.js in `<header />` component.
+- App/index.js in `<header />` DOM element.
   - `<Webcam className="react-webcam"/>` return webcam component.
   - `<Canvas className="react-canvas" />` return canvas component.
 
 ## **4.** Define references to those
 
-- App/index.js above `App()` return.
+- App/index.js in `App()` component body.
   - connect canvas and webcam components with `useRef`.
   - `const webcamRef = useRef(null);`
   - `const camvasRef = useRef(null);`
