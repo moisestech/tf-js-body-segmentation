@@ -29,13 +29,18 @@ export default function App({project_name = "Tensorflow.js React Body Segmentati
   // ingests video/model data
   const detect = async (net) => {
     // Check data is available
-    // Get video properties
-    // Set video width and height
-    // Set canvas width and height
-    // Make detections
-    // Draw detections
+    if (
+      typeof webcamRef.current !== "undefined" && 
+      webcamRef.current !== null && 
+      webcamRef.current.video.readyState === 4
+    )  {
+      // Get video properties
+      // Set video width and height
+      // Set canvas width and height
+      // Make detections
+      // Draw detections
+    }
   }
-
 
   // invoke model
   runBodySegment();
