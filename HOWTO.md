@@ -40,13 +40,13 @@ const runBodySegment = async () => {
   console.log("Bodypix model loaded!)
 }
 
-runBodysegment();
+runBodySegment();
 ```
-
 
 ## **6.** Detect function
 
 - **Detect Function** loops through **bodyPix** output inference in near-realtime allowing **react-canvas component** to draw a segmentation with our **realtime webcam-react component**.
+- **Detect Function** will run within our **runBodySegment** function.
 
 ## **7.** Draw using drawMask
 
