@@ -25,9 +25,28 @@
   - `const webcamRef = useRef(null);`
   - `const camvasRef = useRef(null);`
 
-## **5.** Load handpose
+## **5.** Load BodyPix Model
+
+- App/index.js in `App()` component body.
+  - The **bodyPix** model is pretrained saving an extra step.
+  - Load the model using [ES7 async/await](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Async_await)
+  - create a`const net` variable that `await bodyPix.load()`
+    - this `net variable` will be passed to our **detect function** later on.
+  - Immediately invoke `runBodysegment()` function once the model loads.
+
+```javascript
+const runBodySegment = async () => {
+  const net = await bodyPix.load();
+  console.log("Bodypix model loaded!)
+}
+
+runBodysegment();
+```
+
 
 ## **6.** Detect function
+
+- **Detect Function** loops through **bodyPix** output inference in near-realtime allowing **react-canvas component** to draw a segmentation with our **realtime webcam-react component**.
 
 ## **7.** Draw using drawMask
 
