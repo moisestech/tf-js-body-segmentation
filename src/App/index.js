@@ -26,6 +26,17 @@ export default function App({project_name = "Tensorflow.js React Body Segmentati
     console.log("Bodypix model loaded!");
   };
   
+  // ingests video/model data
+  const detect = async (net) => {
+    // Check data is available
+    // Get video properties
+    // Set video width and height
+    // Set canvas width and height
+    // Make detections
+    // Draw detections
+  }
+
+
   // invoke model
   runBodySegment();
 
