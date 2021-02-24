@@ -48,6 +48,22 @@ runBodySegment();
 - **Detect Function** loops through **bodyPix** output inference in near-realtime allowing **react-canvas component** to draw a segmentation with our **realtime webcam-react component**.
 - **Detect Function** will run within our **runBodySegment** function.
 
+1. Check the data is available
+
+   ```javascript
+   if (
+     typeof webcamRef.current !== "undefined" &&
+     webcamRef.current !== null &&
+     webcamRef.current.video.readyState === 4
+   )
+   ```
+
+2. Get video properties
+3. Set video width and height
+4. Set canvas width and height
+5. Make detections
+6. Draw detections
+
 ## **7.** Draw using drawMask
 
 ---
