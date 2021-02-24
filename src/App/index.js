@@ -24,6 +24,11 @@ export default function App({project_name = "Tensorflow.js React Body Segmentati
   const runBodySegment = async () => {
     const net = await bodyPix.load();
     console.log("Bodypix model loaded!");
+
+    // trigger inference near real-time
+    setInterval(() => {
+      detect(net);
+    }, 100);
   };
   
   // ingests video/model data
@@ -50,7 +55,7 @@ export default function App({project_name = "Tensorflow.js React Body Segmentati
       // Make detections
       const person = await net.segmentPersonParts(video);
       console.log(person);
-      
+
       // Draw detections
     }
   }
