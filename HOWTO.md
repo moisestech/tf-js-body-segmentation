@@ -115,13 +115,20 @@ runBodySegment();
      const coloredPartImage = bodyPix.toColoredPartMask(person);
      ```
 
-  8. Draw Detection Mask
-
-     ```javascript
-     ```
-
-     
 ## **7.** Draw using drawMask
+
+```javascript
+bodyPix.drawMask(
+ canvasRef.current,
+ video,
+ coloredPartImage,
+ 0.7,
+ 0, 
+ false
+);
+```
+
+Pass **`drawMask`** paramets including the **canvasRef**, and **coloredPartImage**, opacity, blur, and flip image.
 
 ---
 
