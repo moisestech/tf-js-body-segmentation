@@ -20,21 +20,26 @@
 
 ## **4.** Define references to those
 
-- App/index.js in `App()` component body.
+- App/index.js in **`App()`** component body.
   - connect canvas and webcam components with `useRef`.
-  - `const webcamRef = useRef(null);`
-  - `const camvasRef = useRef(null);`
+
+  ```javascript
+  // in App() body
+  const webcamRef = useRef(null);
+  const camvasRef = useRef(null);
+  ```
 
 ## **5.** Load BodyPix Model
 
-- App/index.js in `App()` component body.
+- App/index.js in **`App()`** component body.
   - The **bodyPix** model is pretrained saving an extra step.
   - Load the model using [ES7 async/await](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Async_await)
-  - create a`const net` variable that `await bodyPix.load()`
-    - this `net variable` will be passed to our **detect function** later on.
-  - Immediately invoke `runBodysegment()` function once the model loads.
+  - create a const **`net`** variable that **`await bodyPix.load()`**
+    - this **`net`** variable will be passed to our **detect function** later on.
+  - Immediately invoke **`runBodysegment()`** function once the model loads.
 
 ```javascript
+// in App() body
 const runBodySegment = async () => {
   const net = await bodyPix.load();
   console.log("Bodypix model loaded!)
@@ -51,6 +56,7 @@ runBodySegment();
   1. Check the data is available
 
      ```javascript
+     // in Detect function
      if (
        typeof webcamRef.current !== "undefined" &&
        webcamRef.current !== null &&
@@ -84,7 +90,7 @@ runBodySegment();
 
   5. Make detections
 
-     The **`const person`** variable holds the async/await result of the parameter **`net`**, which uses the method *`*sementPersonParts`* with the parameter **`video`**.
+     The **`const person`** variable holds the async/await result of the parameter **`net`**, which uses the method **`*sementPersonParts`** with the parameter **`video`**.
 
      ```javascript
      const person = await net.segmentPersonParts(video);
