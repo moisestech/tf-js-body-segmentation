@@ -35,7 +35,14 @@ export default function App({project_name = "Tensorflow.js React Body Segmentati
       webcamRef.current.video.readyState === 4
     )  {
       // Get video properties
+      const video = webcamRef.current.video;
+      const videoHeight = video.videoHeight;
+      const videoWidth = video.videoWidth;
+
       // Set video width and height
+      webcamRef.current.video.width = videoWidth;
+      webcamRef.current.video.height = videoHeight;
+
       // Set canvas width and height
       // Make detections
       // Draw detections
