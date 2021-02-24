@@ -57,6 +57,16 @@ export default function App({project_name = "Tensorflow.js React Body Segmentati
       console.log(person);
 
       // Draw detections
+      const coloredPartImage = bodyPix.toColoredPartMask(person);
+
+      bodyPix.drawMask(
+        canvasRef.current,
+        video,
+        coloredPartImage,
+        0.7,
+        0, 
+        false
+      );
     }
   }
 
