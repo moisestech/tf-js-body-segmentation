@@ -75,9 +75,15 @@ runBodySegment();
      webcamRef.current.video.height = videoHeight;
      ```
 
-1. Set canvas width and height
-2. Make detections
-3. Draw detections
+  4. Set canvas width and height
+
+     ```javascript
+     canvasRef.current.width = videoWidth;
+     canvasRef.current.height = videoHeight;
+     ```
+
+  5. Make detections
+  6. Draw detections
 
 ## **7.** Draw using drawMask
 
