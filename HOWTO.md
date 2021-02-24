@@ -101,8 +101,26 @@ runBodySegment();
      }, 100);
      ```
 
-  1. Draw detections
+     Once, output is logging to the browser, the **person** variable will log and object with the confidence score, body part, and position.
 
+     A total of 23 different points.
+
+  7. Create Detection Mask
+
+     Call the method **`bodyPix.toColoredPartMask`** with parameter **`person`**, which returns all of the detection masking data from the bodyPix.
+
+     This masking data will be stored in model the **`coloredPartImage`**.
+
+     ```javascript
+     const coloredPartImage = bodyPix.toColoredPartMask(person);
+     ```
+
+  8. Draw Detection Mask
+
+     ```javascript
+     ```
+
+     
 ## **7.** Draw using drawMask
 
 ---
