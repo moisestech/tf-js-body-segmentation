@@ -83,7 +83,21 @@ runBodySegment();
      ```
 
   5. Make detections
-  6. Draw detections
+
+     The **`const person`** variable holds the async/await result of the parameter **`net`**, which uses the method *`*sementPersonParts`* with the parameter **`video`**.
+
+     ```javascript
+     const person = await net.segmentPersonParts(video);
+     console.log(person);
+     ```
+
+  6. Connect Detect Function in runBodySegment
+  
+  ```javascript
+
+  ```
+
+  7. Draw detections
 
 ## **7.** Draw using drawMask
 
