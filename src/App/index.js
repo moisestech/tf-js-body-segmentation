@@ -46,8 +46,11 @@ export default function App({project_name = "Tensorflow.js React Body Segmentati
       // Set canvas width and height
       canvasRef.current.width = videoWidth;
       canvasRef.current.height = videoHeight;
-      
+
       // Make detections
+      const person = await net.segmentPersonParts(video);
+      console.log(person);
+      
       // Draw detections
     }
   }
