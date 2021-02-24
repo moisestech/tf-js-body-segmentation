@@ -93,11 +93,15 @@ runBodySegment();
 
   6. Connect Detect Function in runBodySegment
   
-  ```javascript
+     Trigger inference near realtime in **runBodySegement** function.
 
-  ```
+     ```javascript
+     setInterval(() => {
+      detect(net);
+     }, 100);
+     ```
 
-  7. Draw detections
+  1. Draw detections
 
 ## **7.** Draw using drawMask
 
