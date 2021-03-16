@@ -6,7 +6,7 @@
 // 6. Detect function
 // 7. Draw using drawMask
 
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 
 // access to webcam
 import Webcam from "react-webcam";
@@ -15,10 +15,29 @@ import Webcam from "react-webcam";
 import * as tf from "@tensorflow/tfjs";
 import * as bodyPix from "@tensorflow-models/body-pix";
 
+// init dims
+let initDims = {
+  width: 0,
+  height: 0
+};
+
 export default function App({project_name = "Tensorflow.js React Body Segmentation"}) {
-  
-  const webCamRef = useRef(null);
+  // manage canvas width and height current, and prev
+  const [width, setWidth] = useState(0);
+  const [height, setHeight] = useState(0);
+  const prevWidthRef = useRef();
+  const prevHeightRef = useRef();
+
+  const webcamRef = useRef(null);
   const canvasRef = useRef(null);
+
+  useEffect(() => {
+    prevWidthRef.current = width;
+    prevHeightRef.current = height;
+  });
+
+  const prevWidth = prevWidthRef.current;
+  const prevHeight = prevWidthRef.current;
 
   // load model
   const runBodySegment = async () => {
@@ -48,10 +67,6 @@ export default function App({project_name = "Tensorflow.js React Body Segmentati
       webcamRef.current.video.width = videoWidth;
       webcamRef.current.video.height = videoHeight;
 
-      // Set canvas width and height
-      canvasRef.current.width = videoWidth;
-      canvasRef.current.height = videoHeight;
-
       // Make detections
       const person = await net.segmentPersonParts(video);
       console.log(person);
@@ -74,14 +89,14 @@ export default function App({project_name = "Tensorflow.js React Body Segmentati
   runBodySegment();
 
   return (  
-    <div clasName="App">
+    <div className="App">
       <h1>{project_name}</h1>
       <header>
         {/* where one intakes data for tfjs  */}
         <Webcam ref={webcamRef} className="react-webcam" />
 
         {/* where one draws the segmentation layer */}
-        <Canvas ref={canvasRef} className="react-canvas" />
+        <canvas ref={canvasRef} className="react-canvas" />
       </header>
     </div>
   )
