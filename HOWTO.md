@@ -21,6 +21,7 @@
 ## **4.** Define references to those
 
 - App/index.js in **`App()`** component body.
+
   - connect canvas and webcam components with `useRef`.
 
   ```javascript
@@ -98,12 +99,12 @@ runBodySegment();
      ```
 
   6. Connect Detect Function in runBodySegment
-  
+
      Trigger inference near realtime in **runBodySegement** function.
 
      ```javascript
      setInterval(() => {
-      detect(net);
+       detect(net);
      }, 100);
      ```
 
@@ -124,14 +125,7 @@ runBodySegment();
 ## **7.** Draw using drawMask
 
 ```javascript
-bodyPix.drawMask(
- canvasRef.current,
- video,
- coloredPartImage,
- 0.7,
- 0, 
- false
-);
+bodyPix.drawMask(canvasRef.current, video, coloredPartImage, 0.7, 0, false);
 ```
 
 Pass **`drawMask`** paramets including the **canvasRef**, and **coloredPartImage**, opacity, blur, and flip image.
@@ -162,16 +156,17 @@ Pass **`drawMask`** paramets including the **canvasRef**, and **coloredPartImage
 
 ## WEBPACK HOW-TO
 
-- **Webpack**: Module bundler.
-- **webpack-cli**: is the interface we use to communicate with webpack.
-- **webpack-dev-server**: info coming soon.
+- [**Webpack**](https://www.npmjs.com/package/webpack): a module bundler. Its main purpose is to bundle JavaScript files for usage in a browser, yet it is also capable of transforming, bundling, or packaging just about any resource or asset.
+- [**webpack-cli**](https://www.npmjs.com/package/webpack-cli): is the interface we use to communicate with webpack. webpack CLI provides a set of tools to improve the setup of custom webpack configuration.
+- [**webpack-dev-server**](https://www.npmjs.com/package/webpack-dev-server): Use webpack with a development server that provides live reloading. This should be used for development only.
+  - It uses [webpack-dev-middleware](https://github.com/webpack/webpack-dev-middleware) under the hood, which provides fast in-memory access to the webpack assets.
 
 ### Plugins
 
-- **CopyWebpackPlugin**: info coming soon.
-- **HtmlWebpackPlugin**: info coming soon.
-- **CleanWebpackPlugin**: info coming soon.
-- **UglifyPlugin**: info coming soon.
+- [**CopyWebpackPlugin**](https://www.npmjs.com/package/copy-webpack-plugin): Copies individual files or entire directories, which already exist, to the build directory.
+- [**HtmlWebpackPlugin**](https://www.npmjs.com/package/html-webpack-plugin): Plugin that simplifies creation of HTML files to serve your bundles.
+- [**CleanWebpackPlugin**](https://www.npmjs.com/package/clean-webpack-plugin): A webpack plugin to remove/clean your build folder(s).
+- [**UglifyPlugin**](https://www.npmjs.com/package/uglifyjs-webpack-plugin): This plugin uses [uglify-js](https://github.com/mishoo/UglifyJS) to minify your JavaScript.
 
 ---
 
