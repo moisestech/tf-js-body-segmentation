@@ -6,58 +6,46 @@
 // 6. Detect function
 // 7. Draw using drawMask
 
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState, useEffect } from 'react';
 
 // access to webcam
-import Webcam from "react-webcam";
+import Webcam from 'react-webcam';
 
 // for running object detection
-import * as tf from "@tensorflow/tfjs";
-import * as bodyPix from "@tensorflow-models/body-pix";
+import * as tf from '@tensorflow/tfjs';
+import * as bodyPix from '@tensorflow-models/body-pix';
 
 // init dims
 let initDims = {
   width: 0,
-  height: 0
+  height: 0,
 };
 
-export default function App({project_name = "Tensorflow.js React Body Segmentation"}) {
-  // manage canvas width and height current, and prev
-  const [width, setWidth] = useState(0);
-  const [height, setHeight] = useState(0);
-  const prevWidthRef = useRef();
-  const prevHeightRef = useRef();
-
+export default function App({
+  project_name = 'Tensorflow.js React Body Segmentation',
+}) {
   const webcamRef = useRef(null);
   const canvasRef = useRef(null);
-
-  useEffect(() => {
-    prevWidthRef.current = width;
-    prevHeightRef.current = height;
-  });
-
-  const prevWidth = prevWidthRef.current;
-  const prevHeight = prevWidthRef.current;
 
   // load model
   const runBodySegment = async () => {
     const net = await bodyPix.load();
-    console.log("Bodypix model loaded!");
+    console.log('Bodypix model loaded!');
 
     // trigger inference near real-time
     setInterval(() => {
       detect(net);
     }, 100);
   };
-  
+
   // ingests video/model data
   const detect = async (net) => {
     // Check data is available
     if (
-      typeof webcamRef.current !== "undefined" && 
-      webcamRef.current !== null && 
+      typeof webcamRef.current !== 'undefined' &&
+      webcamRef.current !== null &&
       webcamRef.current.video.readyState === 4
-    )  {
+    ) {
       // Get video properties
       const video = webcamRef.current.video;
       const videoHeight = video.videoHeight;
@@ -79,16 +67,16 @@ export default function App({project_name = "Tensorflow.js React Body Segmentati
         video,
         coloredPartImage,
         0.7,
-        0, 
+        0,
         false
       );
     }
-  }
+  };
 
   // invoke model
   runBodySegment();
 
-  return (  
+  return (
     <div className="App">
       <h1>{project_name}</h1>
       <header>
@@ -99,11 +87,5 @@ export default function App({project_name = "Tensorflow.js React Body Segmentati
         <canvas ref={canvasRef} className="react-canvas" />
       </header>
     </div>
-  )
+  );
 }
-
-// video: https://www.youtube.com/watch?v=KAaXbGr9o0s
-// code: https://github.com/nicknochnack/RealTimeBodySegmentation
-// other blog: https://heartbeat.fritz.ai/body-segmentation-in-webcam-with-tensorflow-js-b455d6ed21b5
-
-// 12m 29s
