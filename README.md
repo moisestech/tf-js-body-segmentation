@@ -1,6 +1,6 @@
-# Tensorflow.js React Body Segmentation
+# TensorFlow.JS React Body Segmentation
 
-## **Interactice Webcam Body Segmentation**
+## **Interactive Webcam Body Segmentation**
 
 ## ⚙ Features
 
@@ -8,7 +8,7 @@
 - [React Hooks](https://reactjs.org/docs/hooks-intro.html)
 - [React Webcam](https://www.npmjs.com/package/react-webcam)
 - [Canvas API](https://www.w3schools.com/tags/canvas_arc.asp)
-- [Tensorflow @2.8.5](https://www.tensorflow.org/js/models)
+- [TensorFlow @2.8.5](https://www.tensorflow.org/js/models)
 - [Pose Model BodyPix](https://www.npmjs.com/package/@tensorflow-models/body-pix)
 - [ES8](https://www.w3schools.com/js/js_2018.asp)
 - [PropTypes](https://www.npmjs.com/package/prop-types)
@@ -33,7 +33,7 @@ For additional info click [here](https://github.com/moisestech/tf-js-body-segmen
 
 ## 🌿 App tree
 
-``` bash
+```bash
 ├── HOWTO.md
 ├── LICENSE
 ├── README.md
@@ -53,20 +53,21 @@ For additional info click [here](https://github.com/moisestech/tf-js-body-segmen
 
 ## ⛰️ Roadmap
 
-1. Migrate to TypeScript
-2. Make Mobile Friendly
-3. Write Tests
+1. Make Mobile Friendly
+2. Write Tests
 
 ## To-Do's
 
-1. Finnish Webpack Config
-2. Finnish Tutorial
-3. Finnish README.md page
-4. Finnish HOWTO.md page
-5. Add Logo
-6. Add WebApp Preview Gif
-7. Add File Diagram
-8. Add Babel Compilation
+1. Migrate to TypeScript
+2. Finnish Webpack Config
+3. Finnish Tutorial
+4. Finnish `README.md` page
+5. Finnish `HOWTO.md` page
+6. Add Logo
+7. Add WebApp Preview Gif
+8. Add File Diagram
+9. Add Babel Compilation
 
 ---
+
 [Moises Sanabria](https://www.moises.tech/)
